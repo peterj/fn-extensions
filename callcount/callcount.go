@@ -8,6 +8,7 @@ import (
 var callCountMap map[string]int
 
 func init() {
+	callCountMap = make(map[string]int)
 	server.RegisterExtension(&callCountExtension{})
 }
 
