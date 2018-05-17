@@ -17,6 +17,6 @@ func (c *CallCount) BeforeCall(ctx context.Context, call *models.Call) error {
 
 func (c *CallCount) AfterCall(ctx context.Context, call *models.Call) error {
 	callCountMap[call.ID]++
-	fmt.Printf("Function %s was called %d times\n", call.ID, callCountMap[call.ID])
+	fmt.Printf("Call nubmer: %d\n", call.ID, callCountMap[call.ID])
 	return nil
 }
