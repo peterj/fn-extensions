@@ -21,6 +21,7 @@ func (e *callCountExtension) Name() string {
 
 func (e *callCountExtension) Setup(s fnext.ExtServer) error {
 	s.AddCallListener(&CallCount{})
+
 	return nil
 }
 
