@@ -20,10 +20,7 @@ func (e *callCountExtension) Name() string {
 }
 
 func (e *callCountExtension) Setup(s fnext.ExtServer) error {
-	cc := &CallCount{}
-
-	// Add a Call listener
-	s.AddCallListener(cc)
+	s.AddCallListener(&CallCount{})
 	return nil
 }
 
